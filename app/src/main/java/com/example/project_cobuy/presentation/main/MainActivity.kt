@@ -1,5 +1,6 @@
 package com.example.project_cobuy.presentation.main
 
+import androidx.core.view.get
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -62,7 +63,8 @@ internal class MainActivity : BaseActivity<MainViewModel,ActivityMainBinding>() 
         binding.bottomNavigationView.setupWithNavController(navController)
 
         binding.bottomNavigationView.menu.getItem(0).setChecked(true)
-        binding.bottomNavigationView.itemIconTintList = null
+
+
 
     }
 

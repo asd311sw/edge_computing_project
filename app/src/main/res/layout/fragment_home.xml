@@ -182,7 +182,7 @@
                 android:layout_height="wrap_content"
                 android:text="음료"
                 android:textColor="@color/white"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -218,7 +218,7 @@
                 android:layout_height="wrap_content"
                 android:text="식품"
                 android:textColor="@color/white"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -254,7 +254,7 @@
                 android:layout_height="wrap_content"
                 android:text="디지털/가전"
                 android:textColor="@color/white"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -291,7 +291,7 @@
                 android:layout_height="wrap_content"
                 android:text="건강/의료용품"
                 android:textColor="@color/white"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -328,7 +328,7 @@
                 android:layout_height="wrap_content"
                 android:text="스포츠/레저"
                 android:textColor="@color/white"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -364,7 +364,7 @@
                 android:layout_height="wrap_content"
                 android:text="패션"
                 android:textColor="@color/white"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

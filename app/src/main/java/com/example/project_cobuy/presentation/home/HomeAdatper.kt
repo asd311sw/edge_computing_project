@@ -3,6 +3,7 @@ package com.example.project_cobuy.presentation.home
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -17,7 +18,6 @@ class HomeAdatper(
 
     inner class ViewHolder(var binding: ItemHomeBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        @SuppressLint("ResourceAsColor")
         fun bind(product: ProductEntity) {
 
             binding.categoryTextView.text = product.category
@@ -25,26 +25,31 @@ class HomeAdatper(
             binding.priceTextView.text = product.price
 
 
+
             when (product.category) {
                 "음료" -> {
-                    binding.categoryTextView.setTextColor(R.color.green)
+                    binding.categoryTextView.setTextColor(ContextCompat.getColor(binding.categoryTextView.context,R.color.green))
                     binding.imageView.setImageResource(R.drawable.ic_baseline_emoji_food_beverage_24)
                 }
                 "식품" -> {
-                    binding.categoryTextView.setTextColor(R.color.red)
+                    binding.categoryTextView.setTextColor(ContextCompat.getColor(binding.categoryTextView.context,R.color.red))
                     binding.imageView.setImageResource(R.drawable.ic_baseline_fastfood_24)
                 }
                 "디지털/가전" -> {
-                    binding.categoryTextView.setTextColor(com.facebook.R.color.com_facebook_button_background_color)
+
+                    binding.categoryTextView.setTextColor(ContextCompat.getColor(binding.categoryTextView.context,
+                        com.facebook.R.color.com_facebook_button_background_color))
                     binding.imageView.setImageResource(R.drawable.ic_baseline_computer_24)
                 }
-
             }
+
 
             binding.root.setOnClickListener {
 
                 onClick(product)
             }
+
+
         }
 
 

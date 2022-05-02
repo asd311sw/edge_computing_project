@@ -6,6 +6,7 @@ import com.example.project_cobuy.extension.getPriceApiService
 import com.example.project_cobuy.presentation.BaseViewModel
 import com.example.project_cobuy.presentation.home.HomeViewModel
 import com.example.project_cobuy.presentation.main.MainViewModel
+import com.example.project_cobuy.presentation.profile.ProfileViewModel
 import kotlinx.coroutines.Dispatchers
 import org.koin.androidx.compose.get
 import org.koin.androidx.compose.viewModel
@@ -19,6 +20,7 @@ internal val appModule = module {
 
     viewModel { MainViewModel() }
     viewModel { HomeViewModel() }
+    viewModel { ProfileViewModel() }
 
 
     single { Dispatchers.IO }
