@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/moblack"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@color/moblack">
 
 
     <View
@@ -17,68 +18,40 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolBar"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:paddingEnd="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:subtitle="금오공대"
-        app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Large"
-        app:subtitleTextColor="@color/white"
-        app:title="에브리타임"
-        app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:titleTextColor="@color/red" />
-
-
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/searchButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/ic_baseline_search_24"
-        android:backgroundTint="@color/white"
-        app:layout_constraintBottom_toBottomOf="@id/toolBar"
-        app:layout_constraintEnd_toStartOf="@id/profileButton"
-        app:layout_constraintTop_toTopOf="@id/toolBar" />
-
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/profileButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/ic_baseline_people_24"
-        android:backgroundTint="@color/white"
-        app:layout_constraintBottom_toBottomOf="@id/toolBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/toolBar" />
 
     <TextView
+        android:id="@+id/eventTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
-        android:text="핫한 게시글"
-        android:textColor="@color/white"
+        android:text="오늘의 상품"
+        android:textColor="@color/com_facebook_blue"
         android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/viewPagerLinearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolBar" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager"
+
+    <LinearLayout
+        android:id="@+id/viewPagerLinearLayout"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/viewpager_back"
-        app:layout_constraintBottom_toTopOf="@id/buttonLinearLayout"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintDimensionRatio="2:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolBar" />
+        app:layout_constraintTop_toBottomOf="@id/eventTextView">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/viewpager_back"
+            />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/buttonLinearLayout"
@@ -87,9 +60,8 @@
         android:gravity="center"
         app:layout_constraintBottom_toTopOf="@id/listTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPager">
+        app:layout_constraintTop_toBottomOf="@+id/viewPagerLinearLayout">
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:layout_width="50dp"
@@ -112,16 +84,23 @@
             android:background="@drawable/ic_baseline_list_24"
             android:backgroundTint="@color/green" />
 
-
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ic_baseline_notifications_24"
+            android:backgroundTint="@color/red" />
 
 
     </LinearLayout>
 
 
     <LinearLayout
+        android:id="@+id/titleTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:paddingStart="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/buttonLinearLayout">
@@ -150,6 +129,15 @@
             android:textColor="@color/white"
             android:textSize="16sp" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+
+            android:text="공지사항"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
 
     </LinearLayout>
 
@@ -159,25 +147,246 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
         android:text="실시간 게시글"
-        android:textColor="@color/white"
+        android:textColor="@color/com_facebook_blue"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/recyclerView"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonLinearLayout" />
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/textLinearLayout"
         android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginBottom="1dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/listTextView" />
+        app:layout_constraintTop_toBottomOf="@id/listTextView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/beverageContraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/beverageTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="음료"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/contentBeverageTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/beverageTextView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="커피 10박스 공동구매하실분 강남역에서 만납시다." />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/foodContraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/beverageContraintLayout">
+
+            <TextView
+                android:id="@+id/foodTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="식품"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/contentFoodTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/foodTextView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="목살 10kg싸게 사실 팀 모집합니다." />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/digitalConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/foodContraintLayout">
+
+            <TextView
+                android:id="@+id/digitalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="디지털/가전"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/contentDigitalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/digitalTextView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="무선 이어폰 싸게 팝니다." />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/healthConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/digitalConstraintLayout">
+
+            <TextView
+                android:id="@+id/healthTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="건강/의료용품"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/contentHealthTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/healthTextView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="홍삼 10박스 싸게 파네요! 공동구매 하실분 모이세요" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sportsConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/healthConstraintLayout">
+
+            <TextView
+                android:id="@+id/sportsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="스포츠/레저"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/contentSportsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sportsTextView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fashionConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sportsConstraintLayout">
+
+            <TextView
+                android:id="@+id/fashionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="패션"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/contentFashionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/fashionTextView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

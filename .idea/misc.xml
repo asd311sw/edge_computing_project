@@ -3,12 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/edge_computing/app/src/main/res/drawable/bottom_selector.xml" value="0.1585" />
         <entry key="..\:/edge_computing/app/src/main/res/drawable/button_back.xml" value="0.1455" />
         <entry key="..\:/edge_computing/app/src/main/res/drawable/fragment_home.xml" value="0.1455" />
         <entry key="..\:/edge_computing/app/src/main/res/drawable/ic_baseline_calculate_24.xml" value="0.1455" />
+        <entry key="..\:/edge_computing/app/src/main/res/drawable/ic_baseline_computer_24.xml" value="0.161" />
+        <entry key="..\:/edge_computing/app/src/main/res/drawable/ic_baseline_emoji_food_beverage_24.xml" value="0.161" />
+        <entry key="..\:/edge_computing/app/src/main/res/drawable/ic_baseline_fastfood_24.xml" value="0.161" />
         <entry key="..\:/edge_computing/app/src/main/res/drawable/viewpager_back.xml" value="0.1455" />
         <entry key="..\:/edge_computing/app/src/main/res/layout/activity_main.xml" value="0.24322916666666666" />
-        <entry key="..\:/edge_computing/app/src/main/res/layout/fragment_home.xml" value="0.24322916666666666" />
+        <entry key="..\:/edge_computing/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/edge_computing/app/src/main/res/layout/fragment_home_list.xml" value="0.264" />
+        <entry key="..\:/edge_computing/app/src/main/res/layout/fragment_profile.xml" value="0.24322916666666666" />
+        <entry key="..\:/edge_computing/app/src/main/res/layout/item_home.xml" value="0.24322916666666666" />
         <entry key="..\:/edge_computing/app/src/main/res/menu/bottom_menu.xml" value="0.24322916666666666" />
         <entry key="..\:/edge_computing/app/src/main/res/xml/fragment_home.xml" value="0.24322916666666666" />
       </map>

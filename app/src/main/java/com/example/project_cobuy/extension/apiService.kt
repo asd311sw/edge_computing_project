@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 
 fun getPriceApiService() = Retrofit.Builder()
-    .baseUrl(Url.TMAP_BASE_URL)
+    .baseUrl(Url.NAVER_SHOPPING_BASE_URL)
     .addConverterFactory(GsonConverterFactory.create())
     .client(buildOkHttpClient())
     .build()

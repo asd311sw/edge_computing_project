@@ -10,9 +10,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
-internal class MainViewModel(
-    val lowestPriceRepository: LowestPriceRepository
-):BaseViewModel() {
+internal class MainViewModel:BaseViewModel() {
 
 
     val _mainstate = MutableLiveData<MainState>(MainState.UnInitalized)

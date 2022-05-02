@@ -6,4 +6,4 @@ import kotlinx.parcelize.Parcelize
 
 data class PriceEntity(
     val id:Int
-): Parcelize
+)
