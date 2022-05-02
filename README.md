@@ -5,5 +5,5 @@
 
 
 홈 화면 | 내 정보 | 
---- | --- | --- |
+--- 
 ![Screenshot_20220501-214430_project_cobuy](https://user-images.githubusercontent.com/59782980/166170691-b275d76f-6655-4280-871f-34ab1d8d3c30.jpg) | 
