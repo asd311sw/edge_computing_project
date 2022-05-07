@@ -9,5 +9,6 @@
 
 홈 화면 | 내정보 |
 --- | --- |
-![home_pic](https://user-images.githubusercontent.com/59782980/166176254-b93b9739-5179-4b82-a1d4-1ecc63429c67.jpg)
+![Screenshot_20220505-153209_project_cobuy](https://user-images.githubusercontent.com/59782980/167274025-daff2e68-523d-4e5e-96cb-e82e03ac0b01.jpg | ![Screenshot_20220508-073209_project_cobuy](https://user-images.githubusercontent.com/59782980/167274041-5e0def81-1309-4492-a1cb-e210fbeb196a.jpg)
+
 
