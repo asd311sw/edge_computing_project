@@ -1,5 +1,6 @@
 package com.example.project_cobuy.presentation.main
 
+import android.content.Intent
 import androidx.core.view.get
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -9,6 +10,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.project_cobuy.R
 import com.example.project_cobuy.databinding.ActivityMainBinding
 import com.example.project_cobuy.presentation.BaseActivity
+import com.example.project_cobuy.presentation.home.HomeFragment
 import org.koin.android.ext.android.inject
 
 internal class MainActivity : BaseActivity<MainViewModel,ActivityMainBinding>() {
@@ -30,9 +32,13 @@ internal class MainActivity : BaseActivity<MainViewModel,ActivityMainBinding>() 
                 is MainState.UnInitalized -> {
 
                     initViews()
-
                     bindViews()
-                }
+
+
+
+
+
+                 }
 
 
                 is MainState.Loading -> {

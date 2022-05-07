@@ -9,10 +9,14 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#BBFF0000</color>
     <color name="moblack">#CC000000</color>
-    <color name="gray">#9e9e9e</color>
+    <color name="gray">#8d8d8d</color>
+    <color name="gray2">#bdbdbd</color>
+    <color name="gray3">#9E9E9E</color>
+    <color name="layout_color">#EEEEEE</color>
     <color name="blue">#2962ff</color>
     <color name="green">#80e27e</color>
     <color name="purple">#9162e4</color>
     <color name="brown">#5d4037</color>
     <color name="orange">#ff7043</color>
+
 </resources>

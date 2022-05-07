@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,383 +11,298 @@
     <View
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/moblack"
+        android:background="@color/layout_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/fui_ic_microsoft_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
-        android:id="@+id/eventTextView"
+        android:id="@+id/guideTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
-        android:text="오늘의 상품"
-        android:textColor="@color/com_facebook_blue"
-        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:text="원하는 상품을 최저가로!"
+        android:textColor="@color/black"
+        android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/viewPagerLinearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoImageView" />
 
+    <TextView
+        android:id="@+id/subGuideTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:text="팀으로 모여서 구매하여 더 낮은 가격으로 구매해보세요"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideTextView" />
 
-    <LinearLayout
-        android:id="@+id/viewPagerLinearLayout"
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/search_back"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="5dp"
+        android:hint="원하는 상품을 검색하십시오."
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:padding="10dp"
+        android:shadowColor="@color/com_facebook_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subGuideTextView" />
+
+    <ImageButton
+        android:id="@+id/cancelButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/ic_cancel"
+        android:visibility="invisible"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/searchEditText"
+        app:layout_constraintEnd_toEndOf="@id/searchEditText"
+        app:layout_constraintTop_toTopOf="@id/searchEditText"
+        tools:visibility="visible" />
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintDimensionRatio="2:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/eventTextView">
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewPager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/viewpager_back"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/buttonLinearLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@id/listTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPagerLinearLayout">
-
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/ic_baseline_attach_money_24"
-            android:backgroundTint="@color/blue" />
-
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/ic_baseline_calculate_24"
-            android:backgroundTint="@color/gray" />
-
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/ic_baseline_list_24"
-            android:backgroundTint="@color/green" />
-
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/ic_baseline_notifications_24"
-            android:backgroundTint="@color/red" />
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/titleTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingStart="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonLinearLayout">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="15dp"
-            android:text="최저가"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="15dp"
-            android:text="계산기"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="12dp"
-            android:text="게시글"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="25dp"
-
-            android:text="공지사항"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-
-
-    </LinearLayout>
-
-
-    <TextView
-        android:id="@+id/listTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="70dp"
         android:layout_marginBottom="10dp"
-        android:text="실시간 게시글"
-        android:textColor="@color/com_facebook_blue"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/textLinearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/listTextView">
+        app:layout_constraintTop_toBottomOf="@id/searchEditText">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/beverageContraintLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/beverageTextView"
-                android:layout_width="wrap_content"
+                android:id="@+id/eventTextView"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="음료"
-                android:textColor="@color/white"
-                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                android:text="오늘의 상품"
+                android:textColor="@color/com_facebook_blue"
+                android:textSize="20sp"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/contentBeverageTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:textColor="@color/gray"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/viewpager_back"
+                android:elevation="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/beverageTextView"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="커피 10박스 공동구매하실분 강남역에서 만납시다." />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/foodContraintLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/beverageContraintLayout">
-
-            <TextView
-                android:id="@+id/foodTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="식품"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/eventTextView" />
 
-            <TextView
-                android:id="@+id/contentFoodTextView"
-                android:layout_width="wrap_content"
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:textColor="@color/gray"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="90dp"
+                android:background="@drawable/card_back"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/foodTextView"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="목살 10kg싸게 사실 팀 모집합니다." />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/digitalConstraintLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/foodContraintLayout">
-
-            <TextView
-                android:id="@+id/digitalTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="디지털/가전"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/viewPager">
 
-            <TextView
-                android:id="@+id/contentDigitalTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:textColor="@color/gray"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/digitalTextView"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="무선 이어폰 싸게 팝니다." />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TableLayout
+                    android:id="@+id/menuTableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_back"
+                    android:elevation="10dp">
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/healthConstraintLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/digitalConstraintLayout">
-
-            <TextView
-                android:id="@+id/healthTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="건강/의료용품"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/contentHealthTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:textColor="@color/gray"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/healthTextView"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="홍삼 10박스 싸게 파네요! 공동구매 하실분 모이세요" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TableRow android:layout_marginTop="5dp">
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/sportsConstraintLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/healthConstraintLayout">
+                        <ImageButton
+                            android:id="@+id/foodButton"
+                            android:layout_marginHorizontal="10dp"
+                            android:background="@drawable/ic_food" />
 
-            <TextView
-                android:id="@+id/sportsTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="스포츠/레저"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/contentSportsTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:textColor="@color/gray"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/sportsTextView"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="" />
+                        <ImageButton
+                            android:id="@+id/homeApplianceButton"
+                            android:layout_marginHorizontal="10dp"
+                            android:background="@drawable/ic_laundry" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/fashionConstraintLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/sportsConstraintLayout">
+                        <ImageButton
+                            android:id="@+id/sportsButton"
+                            android:layout_marginHorizontal="10dp"
+                            android:background="@drawable/ic_sports_streaming" />
 
-            <TextView
-                android:id="@+id/fashionTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="패션"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/contentFashionTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:textColor="@color/gray"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/fashionTextView"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="" />
+                        <ImageButton
+                            android:id="@+id/fashionButton"
+                            android:layout_marginHorizontal="10dp"
+                            android:background="@drawable/ic_fashion" />
+
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/foodTextView"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="식품"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/homeApplianceTextView"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="가전"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/sportsTextView"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="스포츠/레저"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/fashionTextView"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="패션"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+
+                    </TableRow>
+
+
+                    <TableRow>
+
+                        <ImageButton
+                            android:id="@+id/digitalButton"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ic_smartphone" />
+
+                        <ImageButton
+                            android:id="@+id/animalButton"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ic_dog_food" />
+
+                        <ImageButton
+                            android:id="@+id/bookButton"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ic_book" />
+
+                        <ImageButton
+                            android:id="@+id/medicalButton"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ic_medical_mask" />
+
+
+                    </TableRow>
+
+                    <TableRow android:layout_marginBottom="10dp">
+
+
+                        <TextView
+                            android:id="@+id/digitalTextView"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="디지털"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/animalTextView"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="반려동물용품"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/bookTextView"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="도서"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/medicalTextView"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="건강/의료용품"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </androidx.cardview.widget.CardView>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
