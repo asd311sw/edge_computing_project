@@ -7,8 +7,12 @@
 
 
 
-홈 화면 | 내정보 | 게시판
+홈 화면 | 내정보 | 상품검색
 --- | --- | --- |
-![Screenshot_20220505-153209_project_cobuy](https://user-images.githubusercontent.com/59782980/167274057-a9083444-e973-418b-b9fa-abc5bdced727.jpg) | ![Screenshot_20220508-073209_project_cobuy](https://user-images.githubusercontent.com/59782980/167274041-5e0def81-1309-4492-a1cb-e210fbeb196a.jpg) |
+![Screenshot_20220505-153209_project_cobuy](https://user-images.githubusercontent.com/59782980/167274057-a9083444-e973-418b-b9fa-abc5bdced727.jpg) | ![Screenshot_20220508-073209_project_cobuy](https://user-images.githubusercontent.com/59782980/167274041-5e0def81-1309-4492-a1cb-e210fbeb196a.jpg) | ![Screenshot_20220520-123358_project_cobuy](https://user-images.githubusercontent.com/59782980/169458255-134ed958-6142-42bf-8ab3-49ef3121c377.jpg)
+
+게시판 | 공지사항 | 계산기
+--- | --- | --- |
+
 
 
