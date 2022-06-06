@@ -4,5 +4,9 @@
 
 
 #계산기 기능 추가 - 
-/n edge_computing_project-master\app\src\main\java\com\example\project_cobuy에 위치하는 CaculatorActivity.kt
-/n edge_computing_project-master\app\src\main\res\layout에 위치하는 activity_caculator.xml
+
+
+edge_computing_project-master\app\src\main\java\com\example\project_cobuy에 위치하는 CaculatorActivity.kt
+
+
+edge_computing_project-master\app\src\main\res\layout에 위치하는 activity_caculator.xml
